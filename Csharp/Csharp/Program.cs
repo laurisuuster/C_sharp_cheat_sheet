@@ -127,13 +127,92 @@ namespace ConsoleApp1
             // Commas
             Console.WriteLine("Commas: {0:n4}", 2378);
 
+            // STRING FUNCTIONS
+            string randString = "A string is a sequential collection of characters that's used to represent text.";
+
+            // Find the number of characters in a string 
+            Console.WriteLine("String Lenght : {0}", randString.Length);
+
+            // Check whether string contains another string
+            Console.WriteLine("String Contains is : {0}", randString.Contains("is"));
+
+            // Retrive the index if string is found
+            Console.WriteLine("Index of is : {0}", randString.IndexOf("is"));
+
+            // Remove number of characters starting from specific index
+            Console.WriteLine("Remove string : {0}", randString.Remove(10, 6));
+
+            // Add a string starting from specific index
+            Console.WriteLine("Insert string : {0}", randString.Insert(9, "extra spicy "));
+
+            // Replace a string inside string
+            Console.WriteLine("Replace string : {0}", randString.Replace("sequential", "consecutive"));
+
+            // Compare strings, ignore case 
+            // OrdinalIgnoreCase property treats the characters in the strings to compare as if they were converted to uppercase using the conventions of the invariant culture
+            Console.WriteLine("Compare X to Y: {0}", String.Compare("X", "Y", StringComparison.OrdinalIgnoreCase));
+
+            // Equals(Object) Determines whether the specified object is equal to the current object.
+            // Equals(Object, Object) Determines whether the specified object instances are considered equal.
+            Console.WriteLine("A = a: {0}", String.Equals("A", "a", StringComparison.OrdinalIgnoreCase));
+
+            // Returns a new string that left-aligns the characters in this string by padding them with spaces on the right, for a specified total length.
+            Console.WriteLine("Pad Right is : {0}", randString.PadRight(20, '.'));
+
+            // Returns a new string that right-aligns the characters in this instance by padding them with spaces on the left, for a specified total length.
+            Console.WriteLine("Pad Left is : {0}", randString.PadLeft(20, '.'));
+
+            // Removes all leading and trailing white-space characters from the current string.
+            Console.WriteLine("Trim : {0}", randString.Trim());
+
+            // Converts the value of a Unicode character to its uppercase equivalent.
+            Console.WriteLine("Uppercase: {0}", randString.ToUpper());
+
+            // Converts the value of a Unicode character to its lowercase equivalent.
+            Console.WriteLine("Lowercase: {0}", randString.ToLower());
+
+            //Use format to create strig
+            string newString = String.Format("{0} saw a {1} {2} in the {3}",
+                "Paua", "Pukekohe", "Fishing", "Adventure park");
+
+            //Escape characters 
+            // The sequence \"  inserts a double quote in a string:
+            string escapeString1 = "We are the so-called \"Vikings\" from the north.";
+
+
+            // ARRAY
+            //Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.
+            // Array of integers
+            int[] favNums = new int[3];
+            favNums[0] = 23;
+            Console.WriteLine("favNum 0 : {0}", favNums[0]);
+
+            // Array of strings
+            string[] cars = { "ranger", "hilux", "d-max" };
+
+            // Var to create array - values must be on the same type. 
+            var employees = new[] { "John", "Markus", "Jackson" };
+
+            // Object to create array - values can be on the different data type. 
+            object[] randoArray = { "Paul", 666, 3.146 };
+
+            // Gets the Type of the current instance.
+            Console.WriteLine("randoArray 0 : {0}", randoArray.GetType());
+
+            // Gets the Lenght of the current instance.
+            Console.WriteLine("randoArray 0 : {0}", randoArray.Length);
+
+            // FOR LOOP 
+            for (int j = 0; j < randoArray.Length; j++)
+            {
+                Console.WriteLine("Array : {0} : Value {1} ", j, randoArray[j]);
+            }
 
 
 
 
 
 
-
-        }
-    } 
-}
+        } // String args 
+    } // Public class
+} // namespace
